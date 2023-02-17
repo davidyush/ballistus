@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ciq8vcfkeupsd"]
+
+[ext_resource type="PackedScene" uid="uid://cdppfui4x3x56" path="res://src/Player/Placer/Placer.tscn" id="1_4k6vf"]
+[ext_resource type="PackedScene" uid="uid://chfsg12r3v0bq" path="res://src/Player/Ballista/Ballista.tscn" id="2_21cg8"]
+
+[node name="Player" instance=ExtResource("1_4k6vf")]
+z_index = 1
+
+[node name="Ballista" parent="." index="0" instance=ExtResource("2_21cg8")]
+
+[editable path="Ballista"]

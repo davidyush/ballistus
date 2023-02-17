@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0hswiu7qalab"]
+
+[ext_resource type="PackedScene" uid="uid://bhaqr4sjvqj67" path="res://src/Collisions/Hitbox/Hitbox.tscn" id="1_dr6c4"]
+[ext_resource type="Script" path="res://src/Bullets/Bullet.gd" id="1_ieolj"]
+
+[node name="Bullet" type="Area2D"]
+z_index = 2
+script = ExtResource("1_ieolj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Hitbox" parent="." instance=ExtResource("1_dr6c4")]

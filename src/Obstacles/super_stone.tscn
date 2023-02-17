@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cu6m4l8i5qq5k"]
+
+[ext_resource type="Texture2D" uid="uid://df2ev31soplyn" path="res://assets/rock_5.png" id="1_sm45s"]
+[ext_resource type="Script" path="res://src/Obstacles/super_stone.gd" id="2_tdpyv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kihhi"]
+radius = 56.5685
+
+[node name="SuperStone" type="Sprite2D" groups=["Obstacle"]]
+texture = ExtResource("1_sm45s")
+centered = false
+script = ExtResource("2_tdpyv")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_kihhi")
+debug_color = Color(0.823529, 0, 0.956863, 0.0588235)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

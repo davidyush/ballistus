@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://8c7hxj5hwk8h"]
+
+[ext_resource type="Texture2D" uid="uid://cq77a0rbr05em" path="res://assets/rock_1.png" id="1_qnfqt"]
+
+[node name="Stone" type="Sprite2D" groups=["Obstacle"]]
+texture = ExtResource("1_qnfqt")
+centered = false

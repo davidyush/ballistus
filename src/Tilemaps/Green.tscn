@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2aspy8t6q4ub"]
+
+[ext_resource type="Texture2D" uid="uid://c7qsrw8oyjthv" path="res://assets/grass_ballista.png" id="1_p0syn"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ng4l7"]
+texture = ExtResource("1_p0syn")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_nejif"]
+sources/0 = SubResource("TileSetAtlasSource_ng4l7")
+
+[node name="Green" type="TileMap"]
+tile_set = SubResource("TileSet_nejif")
+format = 2

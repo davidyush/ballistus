@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://eiejq78f0kss"]
+
+[ext_resource type="PackedScene" uid="uid://d0hswiu7qalab" path="res://src/Bullets/Bullet.tscn" id="1_07jmm"]
+[ext_resource type="Texture2D" uid="uid://bdyjbecflckut" path="res://assets/ballista_bullet.png" id="2_nck38"]
+[ext_resource type="Script" path="res://src/Bullets/BulletPlayer/BulletPlayer.gd" id="2_ojycg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exado"]
+size = Vector2(26, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mmx5j"]
+size = Vector2(28, 10)
+
+[node name="BulletPlayer" instance=ExtResource("1_07jmm")]
+script = ExtResource("2_ojycg")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_exado")
+
+[node name="Sprite2D" parent="." index="1"]
+rotation = 1.5708
+texture = ExtResource("2_nck38")
+
+[node name="Hitbox" parent="." index="2"]
+collision_mask = 2
+monitorable = false
+attack_type = 1
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_mmx5j")
+
+[node name="Timer" type="Timer" parent="." index="3"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+
+[editable path="Hitbox"]

@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://b3501uaamwnwq"]
+
+[ext_resource type="Texture2D" uid="uid://cyif55r45wl7o" path="res://assets/tree_b.png" id="1_1h28b"]
+[ext_resource type="Texture2D" uid="uid://pq4xds6k4xsj" path="res://assets/ball_tree_b.png" id="2_aa0xa"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qu6vr"]
+texture = ExtResource("1_1h28b")
+texture_region_size = Vector2i(30, 30)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mav8d"]
+texture = ExtResource("2_aa0xa")
+texture_region_size = Vector2i(48, 48)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qcmqv"]
+sources/0 = SubResource("TileSetAtlasSource_qu6vr")
+sources/1 = SubResource("TileSetAtlasSource_mav8d")
+
+[node name="Trees" type="TileMap"]
+tile_set = SubResource("TileSet_qcmqv")
+format = 2

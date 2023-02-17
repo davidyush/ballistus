@@ -1,0 +1,38 @@
+[gd_scene load_steps=12 format=3 uid="uid://bgxycie2v7thp"]
+
+[ext_resource type="Texture2D" uid="uid://cq77a0rbr05em" path="res://assets/rock_1.png" id="1_uvf36"]
+[ext_resource type="Texture2D" uid="uid://cptjdwfki8yse" path="res://assets/rock_2.png" id="2_k4slq"]
+[ext_resource type="Texture2D" uid="uid://div2wrkecxgq3" path="res://assets/rock_3.png" id="3_io733"]
+[ext_resource type="Texture2D" uid="uid://d2lx0hvq6jvtx" path="res://assets/rock_4.png" id="4_h2r16"]
+[ext_resource type="Texture2D" uid="uid://df2ev31soplyn" path="res://assets/rock_5.png" id="5_hiq57"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qvfp4"]
+texture = ExtResource("1_uvf36")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ecxxf"]
+texture = ExtResource("2_k4slq")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0bqt3"]
+texture = ExtResource("3_io733")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_63cr6"]
+texture = ExtResource("4_h2r16")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f7h7q"]
+texture = ExtResource("5_hiq57")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_l225k"]
+sources/0 = SubResource("TileSetAtlasSource_qvfp4")
+sources/1 = SubResource("TileSetAtlasSource_ecxxf")
+sources/2 = SubResource("TileSetAtlasSource_0bqt3")
+sources/3 = SubResource("TileSetAtlasSource_63cr6")
+sources/4 = SubResource("TileSetAtlasSource_f7h7q")
+
+[node name="Stones" type="TileMap" groups=["Obstacle"]]
+tile_set = SubResource("TileSet_l225k")
+format = 2

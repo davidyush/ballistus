@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdppfui4x3x56"]
+
+[ext_resource type="Script" path="res://src/Player/Placer/Placer.gd" id="1_rxyh7"]
+
+[node name="Placer" type="Marker2D"]
+script = ExtResource("1_rxyh7")

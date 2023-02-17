@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://c7qhkboa4bb2n"]
+
+[ext_resource type="Texture2D" uid="uid://yt04t4lqege2" path="res://assets/infantryman.png" id="1_mlf0u"]
+[ext_resource type="Script" path="res://src/Enemies/Enemy.gd" id="1_ss4r4"]
+[ext_resource type="PackedScene" uid="uid://c3kmdsavxaa2t" path="res://src/Collisions/Hurtbox/Hurtbox.tscn" id="3_k8urh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cr74k"]
+size = Vector2(14, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w6mpi"]
+size = Vector2(14, 14)
+
+[node name="Enemy" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_ss4r4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_cr74k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mlf0u")
+centered = false
+
+[node name="Hurtbox" parent="." instance=ExtResource("3_k8urh")]
+collision_layer = 2
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_w6mpi")
+
+[connection signal="hit" from="Hurtbox" to="." method="_on_hurtbox_hit"]
+
+[editable path="Hurtbox"]

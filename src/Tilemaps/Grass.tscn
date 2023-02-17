@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhje6u4cpbt1a"]
+
+[ext_resource type="Texture2D" uid="uid://c0haqpouynnc2" path="res://assets/ballista_ground.png" id="1_xgx2i"]
+[ext_resource type="Script" path="res://src/Astar/Astar.gd" id="2_yq6vx"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p7776"]
+texture = ExtResource("1_xgx2i")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_nq4c3"]
+sources/1 = SubResource("TileSetAtlasSource_p7776")
+
+[node name="Grass" type="TileMap"]
+tile_set = SubResource("TileSet_nq4c3")
+format = 2
+layer_0/tile_data = PackedInt32Array(131072, 2, 0)
+script = ExtResource("2_yq6vx")

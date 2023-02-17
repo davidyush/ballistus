@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://xqhm3tlr7ucn"]
+
+[ext_resource type="Script" path="res://src/Player/LineCreator/LineCreator.gd" id="1_3yp1g"]
+
+[sub_resource type="Curve" id="Curve_dlbw4"]
+_data = [Vector2(0.0556793, 0.827273), 0.0, 0.0, 0, 0, Vector2(0.895323, 0.0909091), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="LineCreator" type="Node2D"]
+script = ExtResource("1_3yp1g")
+
+[node name="Line2D" type="Line2D" parent="."]
+width = 2.0
+texture_mode = 1
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
+
+[node name="Line2D2" type="Line2D" parent="."]
+width = 6.0
+width_curve = SubResource("Curve_dlbw4")
+default_color = Color(0.294118, 0.458824, 1, 1)
+texture_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
